@@ -2,14 +2,25 @@
   "name": "stream",
   "version": "1.0.36",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "bun run scripts/migrate.ts",
+    "codegen": "bun run scripts/codegen.ts",
     "dev": "bun run --hot src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cookie": "^0.5.0",
+    "@elysiajs/html": "^0.5.0",
+    "elysia": "^0.5.2",
+    "kysely": "^0.24.2",
+    "kysely-bun-sqlite": "^0.1.1",
+    "marked": "^5.0.2",
+    "nano-memoize": "^3.0.11",
+    "nanoid": "^4.0.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/marked": "^5.0.0",
+    "better-sqlite3": "^8.3.0",
+    "bun-types": "latest",
+    "kysely-codegen": "^0.10.0"
   },
   "module": "src/index.js"
 }
